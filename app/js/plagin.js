@@ -1,0 +1,45 @@
+;(function ($) {
+	var moreOptionBtn = $('.more-option');
+	var secondForm = $('.second-form');
+
+	moreOptionBtn.on('click', function (){
+		secondForm.slideToggle();
+		moreOptionBtn.toggleClass('open');
+	});
+
+
+	//init slick slider
+	$('.areas-slick-js').slick({
+  		slidesToShow: 8,
+  		slidesToScroll: 1,
+  		autoplay: false,
+  		autoplaySpeed: 2000,
+  		 responsive: [
+  		 	{
+  		 	breakpoint: 1023,
+      			settings: {
+      				slidesToShow: 4,
+      			}
+  		 	},
+  		 	{
+  		 	breakpoint: 767,
+      			settings: {
+      				slidesToShow: 2,
+      			}
+  		 	},
+  		 	{
+  		 	breakpoint: 479,
+      			settings: {
+      				slidesToShow: 1,
+      			}
+  		 	},
+  		 ]
+  	});
+
+	//init formstyler
+	$('select').styler();
+
+	//init slicknav
+	$('.header-nav').slicknav();
+
+})(jQuery);
